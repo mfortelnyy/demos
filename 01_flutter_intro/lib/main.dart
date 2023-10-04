@@ -33,7 +33,7 @@ import 'views/eg6.dart';
 
 
 void main() {
-  const exampleNum = 0; // can we hot-reload a change to this?
+  const exampleNum = 1; // can we hot-reload a change to this?
                         // see https://docs.flutter.dev/tools/hot-reload#special-cases
 
   switch(exampleNum) {

@@ -30,6 +30,9 @@ class MacGuffinsListPage extends StatefulWidget {
 }
 
 class _MacGuffinsListPageState extends State<MacGuffinsListPage> {
+  //can't mark somethng final but it is final 
+  //beacuse dart is checking initalizing
+
   late List<MacGuffin> data;
 
   @override
@@ -74,6 +77,7 @@ class _MacGuffinsListPageState extends State<MacGuffinsListPage> {
 
     // Check that this state object is still associated with a mounted widget
     // for the same reason as discussed before (i.e., the "async gap").
+    //not excecuted until page is popped
     if (!mounted) return;
 
     // Check that the result isn't null and is different from the original

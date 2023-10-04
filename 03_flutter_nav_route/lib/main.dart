@@ -6,7 +6,7 @@ import 'views/eg3.dart';
 import 'views/eg4.dart';
 import 'views/eg5.dart';
 import 'views/eg6.dart';
-
+//screen page and route are used interchangably
 void main() {
   runApp(const MainApp());
 }
@@ -16,6 +16,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return App1();
+    return App4();
   }
 }

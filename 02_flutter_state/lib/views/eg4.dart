@@ -25,6 +25,8 @@ class _App4State extends State<App4> {
         // (like a `ChangeNotifier`) and rebuilds its subtree whenever 
         // the `Listenable` sends notification of a change
         ListenableBuilder(
+          //listedable - bottle, special type of widget that automates - if get notfied it rebuilds
+          //redraws each time copunter get incremented
           listenable: _counter, 
           builder: (BuildContext context, Widget? child) {
             return Text('Counter: ${_counter.count}');
@@ -52,7 +54,7 @@ class CounterModel with ChangeNotifier {
   }
 }
 
-
+//observable listener changenotifier - notify widget if object has changed - let widget know
 class Incrementer extends StatelessWidget {
   final String? label;
   final VoidCallback? onPressed;

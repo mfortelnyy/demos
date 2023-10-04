@@ -5,6 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:collection/collection.dart';
 import 'package:provider/provider.dart';
+//providing data down the widget tree
 
 class App6 extends StatelessWidget {
   const App6({super.key});
@@ -12,9 +13,11 @@ class App6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // The ChangeNotifierProvider is a widget that provides a model to all
-    // children widgets. 
+    // children widgets. gives access ti change notifier
     return ChangeNotifierProvider(
+      //happens once
       create: (context) => CountersModel(), 
+      //all children are descendents of changenotifier and can access it 
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -33,7 +36,8 @@ class App6 extends StatelessWidget {
   }
 }
 
-
+//widget context is the element
+//.of goes up the element tree but the cost of using this mechanism over listebalebuilder is worse 
 class CountersModel with ChangeNotifier {
   final Map<int,int> _counts = {};
 
